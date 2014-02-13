@@ -1,0 +1,9 @@
+#
+# PyXB : http://pyxb.sourceforge.net/
+# (test version is 1.2.3)
+#
+# Test scripts
+#
+pyxbgen -u /anywhere/iodef-01.xsd -m iodef-01
+pyxbgen -u /anywhere/iodef-02.xsd -m iodef-02
+pyxbgen -u /anywhere/iodef-03.xsd -m iodef-03

@@ -1,0 +1,36 @@
+XML::Pastor @ Perl
+ - iodef-01.xsd ; unworkable
+ - iodef-02.xsd ; unworkable (remain "hyphen")
+ - iodef-03.xsd ; workable
+ * serializer is not supported
+
+RXSD @ Ruby
+ - iodef-01.xsd ; unworkable
+ - iodef-02.xsd ; workable with replacing hyphen with underscore
+ - iodef-03.xsd ; workable
+ * serializer is not supported
+
+PyXB @ Python
+ - iodef-01.xsd ; workable, replace hyphen with underscore
+ - iodef-02.xsd ; workable with replacing hyphen with underscore
+ - iodef-03.xsd ; workable
+ * serializer might be supported
+
+JAXB @ Java
+ - iodef-01.xsd ; unwarkable
+ - iodef-02.xsd ; workable with removing hyphen
+ - iodef-03.xsd ; workable
+ * serializer might be supported
+
+Code Synthesis XSD @ C++
+ - iodef-01.xsd ; workable with replacing hyphen with underscore
+ - iodef-02.xsd ; workable with replacing hyphen with underscore
+ - iodef-03.xsd ; workable
+ * serializer might be supported
+
+XSD.exe @ C#
+ - iodef-01.xsd ; workable with removing hyphen
+ - iodef-02.xsd ; workable with removing hyphen
+ - iodef-03.xsd ; workable
+ * serializer might be supported
+

@@ -1,0 +1,447 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NewDataSet" targetNamespace="urn:ietf:params:xml:ns:iodef-1.0" xmlns:mstns="urn:ietf:params:xml:ns:iodef-1.0" xmlns="urn:ietf:params:xml:ns:iodef-1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="IncidentID" nillable="true">
+    <xs:complexType>
+      <xs:simpleContent msdata:ColumnName="IncidentID_Text" msdata:Ordinal="3">
+        <xs:extension base="xs:string">
+          <xs:attribute name="name" form="unqualified" type="xs:string" />
+          <xs:attribute name="instance" form="unqualified" type="xs:string" />
+          <xs:attribute name="restriction" form="unqualified" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Description" nillable="true">
+    <xs:complexType>
+      <xs:simpleContent msdata:ColumnName="Description_Text" msdata:Ordinal="1">
+        <xs:extension base="xs:string">
+          <xs:attribute name="lang" form="unqualified" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="iodef_sci" nillable="true">
+    <xs:complexType>
+      <xs:simpleContent msdata:ColumnName="iodef_sci_Text" msdata:Ordinal="1">
+        <xs:extension base="xs:string">
+          <xs:attribute name="lang" form="unqualified" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IODEF-Document">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Incident" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DetectTime" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+              <xs:element name="StartTime" type="xs:string" minOccurs="0" msdata:Ordinal="2" />
+              <xs:element name="EndTime" type="xs:string" minOccurs="0" msdata:Ordinal="3" />
+              <xs:element name="ReportTime" type="xs:string" minOccurs="0" msdata:Ordinal="4" />
+              <xs:element ref="IncidentID" minOccurs="0" maxOccurs="unbounded" />
+              <xs:element name="AlternativeID" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element ref="IncidentID" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                  <xs:attribute name="restriction" form="unqualified" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="RelatedActivity" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element ref="IncidentID" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                  <xs:attribute name="restriction" form="unqualified" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element ref="Description" minOccurs="0" maxOccurs="unbounded" />
+              <xs:element name="Assessment" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Impact" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:simpleContent msdata:ColumnName="Impact_Text" msdata:Ordinal="5">
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="severity" form="unqualified" type="xs:string" />
+                            <xs:attribute name="completion" form="unqualified" type="xs:string" />
+                            <xs:attribute name="type" form="unqualified" type="xs:string" />
+                            <xs:attribute name="ext-type" form="unqualified" type="xs:string" />
+                            <xs:attribute name="lang" form="unqualified" type="xs:string" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="TimeImpact" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:simpleContent msdata:ColumnName="TimeImpact_Text" msdata:Ordinal="5">
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="severity" form="unqualified" type="xs:string" />
+                            <xs:attribute name="metric" form="unqualified" type="xs:string" />
+                            <xs:attribute name="ext-metric" form="unqualified" type="xs:string" />
+                            <xs:attribute name="duration" form="unqualified" type="xs:string" />
+                            <xs:attribute name="ext-duration" form="unqualified" type="xs:string" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="MonetaryImpact" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:simpleContent msdata:ColumnName="MonetaryImpact_Text" msdata:Ordinal="2">
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="severity" form="unqualified" type="xs:string" />
+                            <xs:attribute name="currency" form="unqualified" type="xs:string" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Counter" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:simpleContent msdata:ColumnName="Counter_Text" msdata:Ordinal="5">
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="type" form="unqualified" type="xs:string" />
+                            <xs:attribute name="ext-type" form="unqualified" type="xs:string" />
+                            <xs:attribute name="meaning" form="unqualified" type="xs:string" />
+                            <xs:attribute name="duration" form="unqualified" type="xs:string" />
+                            <xs:attribute name="ext-duration" form="unqualified" type="xs:string" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Confidence" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:simpleContent msdata:ColumnName="Confidence_Text" msdata:Ordinal="1">
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="rating" form="unqualified" type="xs:string" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="AdditionalData" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:simpleContent msdata:ColumnName="AdditionalData_Text" msdata:Ordinal="5">
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="dtype" form="unqualified" type="xs:string" />
+                            <xs:attribute name="ext-dtype" form="unqualified" type="xs:string" />
+                            <xs:attribute name="meaning" form="unqualified" type="xs:string" />
+                            <xs:attribute name="formatid" form="unqualified" type="xs:string" />
+                            <xs:attribute name="restriction" form="unqualified" type="xs:string" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="occurrence" form="unqualified" type="xs:string" />
+                  <xs:attribute name="restriction" form="unqualified" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Method" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Reference" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ReferenceName" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:simpleContent msdata:ColumnName="ReferenceName_Text" msdata:Ordinal="1">
+                                <xs:extension base="xs:string">
+                                  <xs:attribute name="lang" form="unqualified" type="xs:string" />
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="URL" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:simpleContent msdata:ColumnName="URL_Text" msdata:Ordinal="0">
+                                <xs:extension base="xs:string">
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element ref="Description" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                  <xs:attribute name="restriction" form="unqualified" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Contact" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Timezone" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+                    <xs:element name="ContactName" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:simpleContent msdata:ColumnName="ContactName_Text" msdata:Ordinal="1">
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="lang" form="unqualified" type="xs:string" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="RegistryHandle" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:simpleContent msdata:ColumnName="RegistryHandle_Text" msdata:Ordinal="2">
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="registry" form="unqualified" type="xs:string" />
+                            <xs:attribute name="ext-registry" form="unqualified" type="xs:string" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="PostalAddress" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:simpleContent msdata:ColumnName="PostalAddress_Text" msdata:Ordinal="2">
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="meaning" form="unqualified" type="xs:string" />
+                            <xs:attribute name="lang" form="unqualified" type="xs:string" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Email" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:simpleContent msdata:ColumnName="Email_Text" msdata:Ordinal="1">
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="meaning" form="unqualified" type="xs:string" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Telephone" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:simpleContent msdata:ColumnName="Telephone_Text" msdata:Ordinal="1">
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="meaning" form="unqualified" type="xs:string" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Fax" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:simpleContent msdata:ColumnName="Fax_Text" msdata:Ordinal="1">
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="meaning" form="unqualified" type="xs:string" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="role" form="unqualified" type="xs:string" />
+                  <xs:attribute name="ext-role" form="unqualified" type="xs:string" />
+                  <xs:attribute name="type" form="unqualified" type="xs:string" />
+                  <xs:attribute name="ext-type" form="unqualified" type="xs:string" />
+                  <xs:attribute name="restriction" form="unqualified" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="EventData" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="DetectTime" type="xs:string" minOccurs="0" msdata:Ordinal="0" />
+                    <xs:element name="StartTime" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+                    <xs:element name="EndTime" type="xs:string" minOccurs="0" msdata:Ordinal="2" />
+                    <xs:element name="Flow" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="System" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Node" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Counter" type="xs:string" minOccurs="0" />
+                                      <xs:element name="DateTime" type="xs:string" minOccurs="0" />
+                                      <xs:element name="NodeName" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:simpleContent msdata:ColumnName="NodeName_Text" msdata:Ordinal="1">
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute name="lang" form="unqualified" type="xs:string" />
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Address" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:simpleContent msdata:ColumnName="Address_Text" msdata:Ordinal="4">
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute name="category" form="unqualified" type="xs:string" />
+                                              <xs:attribute name="ext-category" form="unqualified" type="xs:string" />
+                                              <xs:attribute name="vlan-name" form="unqualified" type="xs:string" />
+                                              <xs:attribute name="vlan-num" form="unqualified" type="xs:string" />
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="Location" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:simpleContent msdata:ColumnName="Location_Text" msdata:Ordinal="1">
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute name="lang" form="unqualified" type="xs:string" />
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="NodeRole" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:simpleContent msdata:ColumnName="NodeRole_Text" msdata:Ordinal="3">
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute name="category" form="unqualified" type="xs:string" />
+                                              <xs:attribute name="ext-category" form="unqualified" type="xs:string" />
+                                              <xs:attribute name="lang" form="unqualified" type="xs:string" />
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Service" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Port" type="xs:string" minOccurs="0" msdata:Ordinal="0" />
+                                      <xs:element name="Portlist" type="xs:string" minOccurs="0" msdata:Ordinal="0" />
+                                      <xs:element name="ProtoType" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+                                      <xs:element name="ProtoCode" type="xs:string" minOccurs="0" msdata:Ordinal="2" />
+                                      <xs:element name="ProtoField" type="xs:string" minOccurs="0" msdata:Ordinal="3" />
+                                      <xs:element name="Application" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="URL" type="xs:string" minOccurs="0" msdata:Ordinal="0" />
+                                          </xs:sequence>
+                                          <xs:attribute name="swid" form="unqualified" type="xs:string" />
+                                          <xs:attribute name="configid" form="unqualified" type="xs:string" />
+                                          <xs:attribute name="vendor" form="unqualified" type="xs:string" />
+                                          <xs:attribute name="family" form="unqualified" type="xs:string" />
+                                          <xs:attribute name="name" form="unqualified" type="xs:string" />
+                                          <xs:attribute name="version" form="unqualified" type="xs:string" />
+                                          <xs:attribute name="patch" form="unqualified" type="xs:string" />
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="ip_protocol" form="unqualified" type="xs:string" />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="OperatingSystem" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="URL" type="xs:string" minOccurs="0" msdata:Ordinal="0" />
+                                    </xs:sequence>
+                                    <xs:attribute name="swid" form="unqualified" type="xs:string" />
+                                    <xs:attribute name="configid" form="unqualified" type="xs:string" />
+                                    <xs:attribute name="vendor" form="unqualified" type="xs:string" />
+                                    <xs:attribute name="family" form="unqualified" type="xs:string" />
+                                    <xs:attribute name="name" form="unqualified" type="xs:string" />
+                                    <xs:attribute name="version" form="unqualified" type="xs:string" />
+                                    <xs:attribute name="patch" form="unqualified" type="xs:string" />
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="restriction" form="unqualified" type="xs:string" />
+                              <xs:attribute name="interface" form="unqualified" type="xs:string" />
+                              <xs:attribute name="category" form="unqualified" type="xs:string" />
+                              <xs:attribute name="ext-category" form="unqualified" type="xs:string" />
+                              <xs:attribute name="spoofed" form="unqualified" type="xs:string" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Expectation" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="StartTime" type="xs:string" minOccurs="0" msdata:Ordinal="0" />
+                          <xs:element name="EndTime" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
+                        </xs:sequence>
+                        <xs:attribute name="restriction" form="unqualified" type="xs:string" />
+                        <xs:attribute name="severity" form="unqualified" type="xs:string" />
+                        <xs:attribute name="action" form="unqualified" type="xs:string" />
+                        <xs:attribute name="ext-action" form="unqualified" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Record" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="RecordData" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="DateTime" type="xs:string" minOccurs="0" msdata:Ordinal="0" />
+                                <xs:element name="RecordPattern" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:simpleContent msdata:ColumnName="RecordPattern_Text" msdata:Ordinal="6">
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute name="type" form="unqualified" type="xs:string" />
+                                        <xs:attribute name="ext-type" form="unqualified" type="xs:string" />
+                                        <xs:attribute name="offset" form="unqualified" type="xs:string" />
+                                        <xs:attribute name="offsetunit" form="unqualified" type="xs:string" />
+                                        <xs:attribute name="ext-offsetunit" form="unqualified" type="xs:string" />
+                                        <xs:attribute name="instance" form="unqualified" type="xs:string" />
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="RecordItem" nillable="true" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:complexType>
+                                    <xs:simpleContent msdata:ColumnName="RecordItem_Text" msdata:Ordinal="5">
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute name="dtype" form="unqualified" type="xs:string" />
+                                        <xs:attribute name="ext-dtype" form="unqualified" type="xs:string" />
+                                        <xs:attribute name="meaning" form="unqualified" type="xs:string" />
+                                        <xs:attribute name="formatid" form="unqualified" type="xs:string" />
+                                        <xs:attribute name="restriction" form="unqualified" type="xs:string" />
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="restriction" form="unqualified" type="xs:string" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="restriction" form="unqualified" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="restriction" form="unqualified" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="History" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="HistoryItem" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="DateTime" type="xs:string" minOccurs="0" msdata:Ordinal="0" />
+                        </xs:sequence>
+                        <xs:attribute name="restriction" form="unqualified" type="xs:string" />
+                        <xs:attribute name="action" form="unqualified" type="xs:string" />
+                        <xs:attribute name="ext-action" form="unqualified" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="restriction" form="unqualified" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="purpose" form="unqualified" type="xs:string" />
+            <xs:attribute name="ext-purpose" form="unqualified" type="xs:string" />
+            <xs:attribute name="lang" form="unqualified" type="xs:string" />
+            <xs:attribute name="restriction" form="unqualified" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="version" form="unqualified" type="xs:string" />
+      <xs:attribute name="lang" form="unqualified" type="xs:string" />
+      <xs:attribute name="formatid" form="unqualified" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="IncidentID" />
+        <xs:element ref="Description" />
+        <xs:element ref="IODEF-Document" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

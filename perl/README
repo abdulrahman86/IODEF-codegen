@@ -1,0 +1,9 @@
+#
+# XML::Pastor : http://search.cpan.org/~aulusoy/XML-Pastor-1.0.4/
+#
+# Test scripts
+#
+perl xsd-generate.pl ../xsd/iodef-01.xsd iodef-01
+perl xsd-generate.pl ../xsd/iodef-02.xsd iodef-02
+perl xsd-generate.pl ../xsd/iodef-03.xsd iodef-03
+

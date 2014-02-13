@@ -1,0 +1,9 @@
+#
+# JAXB : http://jaxb.java.net
+# (test version is 2.2.7)
+#
+# Test scripts
+#
+jaxb-ri-2.2.7/bin/xjc.sh -d iodef-01 /anywhere/iodef-01.xsd
+jaxb-ri-2.2.7/bin/xjc.sh -d iodef-02 /anywhere/iodef-02.xsd
+jaxb-ri-2.2.7/bin/xjc.sh -d iodef-03 /anywhere/iodef-03.xsd

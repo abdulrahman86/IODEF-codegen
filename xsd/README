@@ -1,0 +1,11 @@
+#
+# IODEF files
+#
+iodef-01.xsd : Incident Object Description Exchange Format v1.00, see RFC 5070
+	http://www.iana.org/assignments/xml-registry/schema/iodef-1.0.xsd
+
+iodef-02.xsd : XSD->XML->XSD converted iodef-01.xsd
+
+iodef-03.xsd : replaced '-' (hyphen) symbol with '_' (underscore) symbol from iodef-02
+
+

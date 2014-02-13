@@ -1,0 +1,8 @@
+#
+# RXSD : https://github.com/movitto/RXSD
+#
+# Test scripts
+#
+xsd_to_ruby file:///anywhere/iodef-01.xsd iodef-01
+xsd_to_ruby file:///anywhere/iodef-02.xsd iodef-02
+xsd_to_ruby file:///anywhere/iodef-03.xsd iodef-03

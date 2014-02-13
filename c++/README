@@ -1,0 +1,10 @@
+#
+# Code Synthesis XSD
+# http://www.codesynthesis.com/products/xsd/
+# (tested version is 3.3.0)
+#
+# Test scripts
+#
+xsd.c++ cxx-tree ../xsd/iodef-01.xsd
+xsd.c++ cxx-tree ../xsd/iodef-02.xsd
+xsd.c++ cxx-tree ../xsd/iodef-03.xsd

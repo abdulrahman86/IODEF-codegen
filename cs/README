@@ -1,0 +1,11 @@
+#
+# xsd.exe - a utility for generating schema or class files
+#		xsd.exe for Visual C#
+#		xsd for mono
+# (tested version is mono 2.10.8)
+#
+# Test scripts
+#
+xsd ../xsd/iodef-01.xsd /classes
+xsd ../xsd/iodef-02.xsd /classes
+xsd ../xsd/iodef-03.xsd /classes
