@@ -1,0 +1,128 @@
+parsing a schema...
+classLoader = java.net.URLClassLoader@1df073d
+SharedSecrets.getJavaNetAccess()=java.net.URLClassLoader$7@90d8ea
+Exception in thread "main" java.lang.AssertionError: javax.xml.bind.JAXBException
+ - with linked exception:
+[com.sun.xml.internal.bind.v2.runtime.IllegalAnnotationsException: 2 counts of IllegalAnnotationExceptions
+com.sun.xml.bind.api.impl.NameConverter is an interface, and JAXB can't handle interfaces.
+	this problem is related to the following location:
+		at com.sun.xml.bind.api.impl.NameConverter
+		at public com.sun.xml.bind.api.impl.NameConverter com.sun.tools.xjc.reader.xmlschema.bindinfo.BIGlobalBinding.nameConverter
+		at com.sun.tools.xjc.reader.xmlschema.bindinfo.BIGlobalBinding
+com.sun.xml.bind.api.impl.NameConverter does not have a no-arg default constructor.
+	this problem is related to the following location:
+		at com.sun.xml.bind.api.impl.NameConverter
+		at public com.sun.xml.bind.api.impl.NameConverter com.sun.tools.xjc.reader.xmlschema.bindinfo.BIGlobalBinding.nameConverter
+		at com.sun.tools.xjc.reader.xmlschema.bindinfo.BIGlobalBinding
+]
+	at com.sun.tools.xjc.reader.xmlschema.bindinfo.BindInfo.getCustomizationContext(BindInfo.java:356)
+	at com.sun.tools.xjc.reader.xmlschema.bindinfo.BindInfo.getCustomizationUnmarshaller(BindInfo.java:362)
+	at com.sun.tools.xjc.reader.xmlschema.bindinfo.AnnotationParserFactoryImpl$1.<init>(AnnotationParserFactoryImpl.java:85)
+	at com.sun.tools.xjc.reader.xmlschema.bindinfo.AnnotationParserFactoryImpl.create(AnnotationParserFactoryImpl.java:84)
+	at com.sun.xml.xsom.impl.parser.NGCCRuntimeEx.createAnnotationParser(NGCCRuntimeEx.java:365)
+	at com.sun.xml.xsom.impl.parser.state.annotation.action0(annotation.java:88)
+	at com.sun.xml.xsom.impl.parser.state.annotation.enterElement(annotation.java:113)
+	at com.sun.xml.xsom.impl.parser.state.NGCCRuntime.sendEnterElement(NGCCRuntime.java:417)
+	at com.sun.xml.xsom.impl.parser.state.NGCCHandler.spawnChildFromEnterElement(NGCCHandler.java:113)
+	at com.sun.xml.xsom.impl.parser.state.Schema.enterElement(Schema.java:353)
+	at com.sun.xml.xsom.impl.parser.state.NGCCRuntime.sendEnterElement(NGCCRuntime.java:417)
+	at com.sun.xml.xsom.impl.parser.state.NGCCHandler.revertToParentFromEnterElement(NGCCHandler.java:150)
+	at com.sun.xml.xsom.impl.parser.state.foreignAttributes.enterElement(foreignAttributes.java:90)
+	at com.sun.xml.xsom.impl.parser.state.NGCCRuntime.sendEnterElement(NGCCRuntime.java:417)
+	at com.sun.xml.xsom.impl.parser.state.NGCCHandler.spawnChildFromEnterElement(NGCCHandler.java:113)
+	at com.sun.xml.xsom.impl.parser.state.Schema.enterElement(Schema.java:228)
+	at com.sun.xml.xsom.impl.parser.state.NGCCRuntime.sendEnterElement(NGCCRuntime.java:417)
+	at com.sun.xml.xsom.impl.parser.state.Schema.enterElement(Schema.java:345)
+	at com.sun.xml.xsom.impl.parser.state.NGCCRuntime.sendEnterElement(NGCCRuntime.java:417)
+	at com.sun.xml.xsom.impl.parser.state.Schema.enterElement(Schema.java:333)
+	at com.sun.xml.xsom.impl.parser.state.NGCCRuntime.sendEnterElement(NGCCRuntime.java:417)
+	at com.sun.xml.xsom.impl.parser.state.Schema.enterElement(Schema.java:427)
+	at com.sun.xml.xsom.impl.parser.state.NGCCRuntime.sendEnterElement(NGCCRuntime.java:417)
+	at com.sun.xml.xsom.impl.parser.state.Schema.enterElement(Schema.java:473)
+	at com.sun.xml.xsom.impl.parser.state.NGCCRuntime.sendEnterElement(NGCCRuntime.java:417)
+	at com.sun.xml.xsom.impl.parser.state.Schema.enterElement(Schema.java:317)
+	at com.sun.xml.xsom.impl.parser.state.NGCCRuntime.startElement(NGCCRuntime.java:258)
+	at org.xml.sax.helpers.XMLFilterImpl.startElement(XMLFilterImpl.java:551)
+	at com.sun.tools.xjc.util.SubtreeCutter.startElement(SubtreeCutter.java:108)
+	at com.sun.tools.xjc.reader.ExtensionBindingChecker.startElement(ExtensionBindingChecker.java:150)
+	at org.xml.sax.helpers.XMLFilterImpl.startElement(XMLFilterImpl.java:551)
+	at com.sun.tools.xjc.reader.xmlschema.parser.IncorrectNamespaceURIChecker.startElement(IncorrectNamespaceURIChecker.java:128)
+	at org.xml.sax.helpers.XMLFilterImpl.startElement(XMLFilterImpl.java:551)
+	at com.sun.tools.xjc.reader.xmlschema.parser.CustomizationContextChecker.startElement(CustomizationContextChecker.java:193)
+	at org.xml.sax.helpers.XMLFilterImpl.startElement(XMLFilterImpl.java:551)
+	at com.sun.tools.xjc.ModelLoader$SpeculationChecker.startElement(ModelLoader.java:473)
+	at org.xml.sax.helpers.XMLFilterImpl.startElement(XMLFilterImpl.java:551)
+	at com.sun.tools.xjc.reader.internalizer.VersionChecker.startElement(VersionChecker.java:103)
+	at org.xml.sax.helpers.XMLFilterImpl.startElement(XMLFilterImpl.java:551)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:504)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:376)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2732)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:625)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:116)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:488)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:819)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:748)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:123)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1208)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:525)
+	at org.xml.sax.helpers.XMLFilterImpl.parse(XMLFilterImpl.java:357)
+	at com.sun.xml.xsom.parser.JAXPParser.parse(JAXPParser.java:94)
+	at com.sun.tools.xjc.ModelLoader$2.parse(ModelLoader.java:497)
+	at com.sun.tools.xjc.ModelLoader$XMLSchemaParser.parse(ModelLoader.java:269)
+	at com.sun.xml.xsom.impl.parser.NGCCRuntimeEx.parseEntity(NGCCRuntimeEx.java:347)
+	at com.sun.xml.xsom.impl.parser.ParserContext.parse(ParserContext.java:128)
+	at com.sun.xml.xsom.parser.XSOMParser.parse(XSOMParser.java:168)
+	at com.sun.tools.xjc.ModelLoader.createXSOMSpeculative(ModelLoader.java:514)
+	at com.sun.tools.xjc.ModelLoader.loadXMLSchema(ModelLoader.java:369)
+	at com.sun.tools.xjc.ModelLoader.load(ModelLoader.java:174)
+	at com.sun.tools.xjc.ModelLoader.load(ModelLoader.java:119)
+	at com.sun.tools.xjc.Driver.run(Driver.java:333)
+	at com.sun.tools.xjc.Driver.run(Driver.java:200)
+	at com.sun.tools.xjc.Driver._main(Driver.java:123)
+	at com.sun.tools.xjc.Driver.access$000(Driver.java:80)
+	at com.sun.tools.xjc.Driver$1.run(Driver.java:103)
+Caused by: javax.xml.bind.JAXBException
+ - with linked exception:
+[com.sun.xml.internal.bind.v2.runtime.IllegalAnnotationsException: 2 counts of IllegalAnnotationExceptions
+com.sun.xml.bind.api.impl.NameConverter is an interface, and JAXB can't handle interfaces.
+	this problem is related to the following location:
+		at com.sun.xml.bind.api.impl.NameConverter
+		at public com.sun.xml.bind.api.impl.NameConverter com.sun.tools.xjc.reader.xmlschema.bindinfo.BIGlobalBinding.nameConverter
+		at com.sun.tools.xjc.reader.xmlschema.bindinfo.BIGlobalBinding
+com.sun.xml.bind.api.impl.NameConverter does not have a no-arg default constructor.
+	this problem is related to the following location:
+		at com.sun.xml.bind.api.impl.NameConverter
+		at public com.sun.xml.bind.api.impl.NameConverter com.sun.tools.xjc.reader.xmlschema.bindinfo.BIGlobalBinding.nameConverter
+		at com.sun.tools.xjc.reader.xmlschema.bindinfo.BIGlobalBinding
+]
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:277)
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:249)
+	at javax.xml.bind.ContextFinder.find(ContextFinder.java:455)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:652)
+	at javax.xml.bind.JAXBContext.newInstance(JAXBContext.java:599)
+	at com.sun.tools.xjc.reader.xmlschema.bindinfo.BindInfo.getCustomizationContext(BindInfo.java:336)
+	... 65 more
+Caused by: com.sun.xml.internal.bind.v2.runtime.IllegalAnnotationsException: 2 counts of IllegalAnnotationExceptions
+com.sun.xml.bind.api.impl.NameConverter is an interface, and JAXB can't handle interfaces.
+	this problem is related to the following location:
+		at com.sun.xml.bind.api.impl.NameConverter
+		at public com.sun.xml.bind.api.impl.NameConverter com.sun.tools.xjc.reader.xmlschema.bindinfo.BIGlobalBinding.nameConverter
+		at com.sun.tools.xjc.reader.xmlschema.bindinfo.BIGlobalBinding
+com.sun.xml.bind.api.impl.NameConverter does not have a no-arg default constructor.
+	this problem is related to the following location:
+		at com.sun.xml.bind.api.impl.NameConverter
+		at public com.sun.xml.bind.api.impl.NameConverter com.sun.tools.xjc.reader.xmlschema.bindinfo.BIGlobalBinding.nameConverter
+		at com.sun.tools.xjc.reader.xmlschema.bindinfo.BIGlobalBinding
+
+	at com.sun.xml.internal.bind.v2.runtime.IllegalAnnotationsException$Builder.check(IllegalAnnotationsException.java:91)
+	at com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl.getTypeInfoSet(JAXBContextImpl.java:436)
+	at com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl.<init>(JAXBContextImpl.java:277)
+	at com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl$JAXBContextBuilder.build(JAXBContextImpl.java:1100)
+	at com.sun.xml.internal.bind.v2.ContextFactory.createContext(ContextFactory.java:143)
+	at com.sun.xml.internal.bind.v2.ContextFactory.createContext(ContextFactory.java:110)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at javax.xml.bind.ContextFinder.newInstance(ContextFinder.java:262)
+	... 70 more

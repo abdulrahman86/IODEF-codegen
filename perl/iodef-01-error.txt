@@ -1,0 +1,5 @@
+Pastor : Unexpected element 'any' in schema!
+
+<sequence >
+  <any namespace="##any" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+</sequence>
