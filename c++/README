@@ -8,3 +8,10 @@
 xsd cxx-tree ../xsd/iodef-01.xsd
 xsd cxx-tree ../xsd/iodef-02.xsd
 xsd cxx-tree ../xsd/iodef-03.xsd
+
+#
+# XSDCXX (XML Data Binding for C++)
+#
+# (need to be download xsds to local )
+#
+xsdcxx cxx-tree --location-map http://www.w3.org/TR/2002/REC-xmldsig-core-20020212/xmldsig-core-schema.xsd=../xsd/xmldsig-core-schema.xsd --location-map http://www.w3.org/2001/XMLSchema.dtd=../xsd/XMLSchema.dtd --location-map http://www.iana.org/assignments/xml-registry/schema/iodef-enum-1.0.xsd=../xsd/iodef-enum-1.0.xsd --location-map http://www.w3c.org/2001/xml.xsd=../xsd/xml.xsd --namespace-map http://www.w3.org/2000/09/xmldsig#=xmldsig_ns ../xsd/iodef-bis14.xsd

@@ -8,4 +8,5 @@ iodef-02.xsd : XSD->XML->XSD converted iodef-01.xsd
 
 iodef-03.xsd : replaced '-' (hyphen) symbol with '_' (underscore) symbol from iodef-02
 
-
+iodef-bis14.xsd : IODEF-bi (draft.14)
+  https://datatracker.ietf.org/doc/draft-ietf-mile-rfc5070-bis/
